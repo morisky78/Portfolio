@@ -1,0 +1,148 @@
+
+:root{
+    --primary: rgb(0, 109, 210);
+}
+body{background-color: black;}
+header{
+    background-color: black;
+}
+header .hd_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 0;
+}
+
+header nav {
+    display:flex;
+    justify-content:flex-end;
+}
+header nav a{
+    font-size:1.2em;
+    padding:0 10px;
+    background-color: pink;
+}
+h1{
+    font-size:2.7em;
+    color:rgb(39, 37, 35);
+    background-color:rgb(190, 190, 112);
+    padding:15px 30px;
+}
+header li{display:inline;}
+.myphotobg {
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.myphotobg{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.myphotobg h2{
+    background-color: pink;
+    margin:0 50px 10px;
+    font-size:1.2em;
+}
+main{
+    width:90vw;
+    margin:0 auto;
+    background-color: aliceblue;
+}
+main section{
+    display:flex;
+    margin-bottom:20px;
+}
+main h3{
+    width:20%;
+    text-align:right;
+    font-weight:bold;
+    font-size:1.8em;
+    border-right:4px solid #000;
+    padding:0 10px 10px 50px;
+    margin-right:20px;
+}
+main .rightbox{
+    width:75%;
+}
+
+#Work a{
+    display:block;
+    position:relative;
+    border:4px solid var(--primary);
+}
+#Work ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#Work li {
+    width:49.2%;
+    margin-bottom:8px;
+}
+
+/* https://www.w3schools.com/css/css3_object-fit.asp */
+#Work li img{
+    width:100%;
+    height:100px;
+    object-fit: cover;
+    display:block;
+}
+#Work li.first{
+    width:100%;
+}
+#Work li.first img{
+    height:400px;
+}
+
+#Work h5{
+    position:absolute;
+    bottom:10px;
+    left:-5px;
+    background-color:var(--primary);
+    padding:8px 12px;
+
+    margin-bottom:5px;
+}
+#Work small{display:block;font-size:0.93m;font-weight:normal;}
+
+#ContactMe ul{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    
+}
+  
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    /* nav links go down from top header */
+    header .hd_top{
+        display:block;
+    }
+    header h1{
+        text-align: center;
+        margin-bottom:10px;
+    }
+    header nav{
+        justify-content: center;
+    }
+
+    main{width:100%;}
+}
+  
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+    
+    /* subtitle inside top image goes in the center */
+    .myphotobg{
+        justify-content: center;
+    }
+}
+  
