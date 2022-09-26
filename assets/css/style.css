@@ -86,13 +86,39 @@ main .rightbox{
     margin-bottom:8px;
 }
 
-/* https://www.w3schools.com/css/css3_object-fit.asp */
+#Work h5{
+    position:absolute;
+    bottom:10px;
+    left:-6px;
+    background-color:var(--primary);
+    padding:8px 12px;
+    margin-bottom:5px;
+    border-radius: 0 10px 10px 0;
+
+    /* noticed absolute positioned header disapear(goes behind the image) when the filter property applied to image */
+    z-index: 2;
+}
+#Work small{display:block;font-size:0.93m;font-weight:normal;}
 #Work li img{
     width:100%;
     height:var(--WorkDefaultHeight);
     object-fit: cover;
     display:block;
+    filter: grayscale(0.1) brightness(0.8) contrast(0.7); 
 }
+
+#Work li:hover img{
+    filter:none;
+    transition: filter 0.5s;
+}
+#Work li:hover h5{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    padding-right:50px;
+    color:white;
+    transition: padding-right 0.5s;
+}
+
+
 #Work li.first{
     width:100%;
 }
@@ -100,16 +126,7 @@ main .rightbox{
     height:400px;
 }
 
-#Work h5{
-    position:absolute;
-    bottom:10px;
-    left:-5px;
-    background-color:var(--primary);
-    padding:8px 12px;
 
-    margin-bottom:5px;
-}
-#Work small{display:block;font-size:0.93m;font-weight:normal;}
 
 #ContactMe{align-items:center;}
 #ContactMe ul{
