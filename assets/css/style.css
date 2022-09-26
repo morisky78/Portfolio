@@ -1,8 +1,9 @@
 
 :root{
     --primary: rgb(0, 109, 210);
+    --WorkDefaultHeight : 120px;
 }
-body{background-color: black;}
+body{background-color: pink;}
 header{
     background-color: black;
 }
@@ -51,10 +52,11 @@ main{
     width:90vw;
     margin:0 auto;
     background-color: aliceblue;
+    padding:30px 0;
 }
 main section{
     display:flex;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 main h3{
     width:20%;
@@ -62,7 +64,7 @@ main h3{
     font-weight:bold;
     font-size:1.8em;
     border-right:4px solid #000;
-    padding:0 10px 10px 50px;
+    padding:0 10px 0 0;
     margin-right:20px;
 }
 main .rightbox{
@@ -87,7 +89,7 @@ main .rightbox{
 /* https://www.w3schools.com/css/css3_object-fit.asp */
 #Work li img{
     width:100%;
-    height:100px;
+    height:var(--WorkDefaultHeight);
     object-fit: cover;
     display:block;
 }
@@ -109,9 +111,11 @@ main .rightbox{
 }
 #Work small{display:block;font-size:0.93m;font-weight:normal;}
 
+#ContactMe{align-items:center;}
 #ContactMe ul{
     display:flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
@@ -134,7 +138,21 @@ main .rightbox{
         justify-content: center;
     }
 
-    main{width:100%;}
+    main{width:90%;}
+
+    main section{
+        flex-direction: column;
+    }
+    main h3{
+        width:100%;
+        text-align: left;
+        border-right:none;
+        border-bottom:4px solid #000;
+        padding-left:0px;
+        margin-right:0px;
+        margin-bottom:20px;
+    }
+    main .rightbox{width:100%;}
 }
   
 /* Small smartphones - image placeholders change color */
@@ -144,5 +162,16 @@ main .rightbox{
     .myphotobg{
         justify-content: center;
     }
+    #Work li {
+        width:100%;
+        margin-bottom:8px;
+    }
+    #Work li.first img{
+        height:var(--WorkDefaultHeight);
+    }
+    #ContactMe ul{
+        flex-direction:column;
+    }
+    
 }
   
