@@ -1,11 +1,12 @@
 
 :root{
     --primary-light: #a5d0cd;
-    --primary-dark: rgb(0, 109, 210);
+    --primary-dark: #6ac3bd;
     --background: #eaf3f2;
+    --fontcolor: #2d6c68;
     --WorkDefaultHeight : 120px;
 }
-
+body{background-color: var(--background);}
 header{
     width:100%;
     background-color:#eaf3f2;
@@ -25,20 +26,25 @@ header nav {
     display:flex;
     justify-content:flex-end;
 }
+header li{display:inline;}
+
 header nav a{
     font-size:1.2em;
     padding:0 10px;
-    background-color: pink;
+    color:var(--fontcolor);
+    font-weight:bold;
 }
 h1{
     position:relative;
     font-size:2.7em;
     color:rgb(39, 37, 35);
-    background-color:var(--primary-light);
-    background-image: linear-gradient(90deg, var(--primary-light) 90%, var(--background));
+    background-color:#fff;
+    /* background-image: linear-gradient(90deg, var(--primary-light) 90%, var(--background)); */
+    border:2px dashed var(--primary-light);
+    border-radius: 10px;
     padding:15px 100px 15px 30px;
 }
-header li{display:inline;}
+
 
 header img.myphoto{
     width:120px;
@@ -46,9 +52,9 @@ header img.myphoto{
     border-radius: 100px;
     /* filter:grayscale(1.0); */
     position:absolute;
-    top:-5px;
+    top:-4px;
     right:-60px;
-    border:4px solid var(--primary-light);
+    border:3px solid var(--primary-light);
     animation-duration: 2s;
     animation-name: slidein;
 }
@@ -70,23 +76,44 @@ header img.myphoto{
     background-image: url("../images/bg2.jpg");
     background-size: cover;
     background-position: center;
-
-    display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+}
+.intro article{
+    margin:0 auto;
+    max-width: 992px;
+    position: relative;
+    font-family: 'Caveat', cursive;
 }
 
 .intro h2{
-    background-color: pink;
-    margin:0 50px 10px;
-    font-size:1.2em;
+    
+    font-size:2.6em;
+    position:absolute;
+    right:20px;
+    top:40px;
+    transform:rotate(-5deg);
+    color:#fff;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    
+}
+.intro p{
+    position:absolute;
+    right:60px;
+    top:120px;
+    font-size:1.6em;
+}
+.intro h2 strong{
+    font-size:1.7em;
+}
+.intro h2 span{
+    color:var(--primary-light);
+    text-shadow: 4px 4px var(--fontcolor);
 }
 
 main{
     width:90vw;
     max-width:992px;
     margin:0 auto;
-    background-color: aliceblue;
+    background-color: #fff;
     padding:30px 0;
 }
 
@@ -99,9 +126,10 @@ main h3{
     text-align:right;
     font-weight:bold;
     font-size:1.8em;
-    border-right:4px solid #000;
+    border-right:3px dashed var(--primary-light);
     padding:0 10px 0 0;
     margin-right:20px;
+    
 }
 main .rightbox{
     width:75%;
