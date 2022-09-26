@@ -11,3 +11,8 @@ https://www.w3schools.com/css/css3_object-fit.asp
 
 // box shadow
 https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/max-width
+
+// header my photo animation
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
