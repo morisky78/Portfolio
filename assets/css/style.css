@@ -5,6 +5,11 @@
     --background: #eaf3f2;
     --fontcolor: #2d6c68;
     --WorkDefaultHeight : 120px;
+    /* values for main structure  :for <header> & <main>  */
+    --main-structure-w : 80wh;
+    --max-width : 992px;
+
+    --dashed_width: 2px;
 }
 body{background-color: var(--background);}
 header{
@@ -18,7 +23,8 @@ header .hd_top{
     justify-content: space-between;
     align-items: center;
     padding:10px 0;
-    max-width:992px;
+    width:var(--mainStructureW );
+    max-width:var(--max-width);
     margin:0 auto;
 }
 
@@ -40,7 +46,7 @@ h1{
     color:rgb(39, 37, 35);
     background-color:#fff;
     /* background-image: linear-gradient(90deg, var(--primary-light) 90%, var(--background)); */
-    border:2px dashed var(--primary-light);
+    border:var(--dashed_width) dashed var(--primary-light);
     border-radius: 10px;
     padding:15px 100px 15px 30px;
 }
@@ -79,7 +85,7 @@ header img.myphoto{
 }
 .intro article{
     margin:0 auto;
-    max-width: 992px;
+    max-width: var(--max-width);
     position: relative;
     font-family: 'Caveat', cursive;
 }
@@ -110,29 +116,42 @@ header img.myphoto{
 }
 
 main{
-    width:90vw;
-    max-width:992px;
+    width:var(--main-structure-w);
+    max-width:var(--max-width);
     margin:0 auto;
     background-color: #fff;
     padding:30px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 main section{
     display:flex;
     margin-bottom:30px;
+    justify-content: center;
 }
+
+/* Headers in main */
 main h3{
     width:20%;
     text-align:right;
     font-weight:bold;
     font-size:1.8em;
-    border-right:3px dashed var(--primary-light);
-    padding:0 10px 0 0;
-    margin-right:20px;
+
+    color:var(--fontcolor);
+    padding:5px 10px 5px 30px;
+    border:var(--dashed_width) dashed var(--primary-light);
+    border-right:none;
+    border-radius:20px 0 0 20px;
     
+    /* To have tight borders aound each section's header */
+    align-self: flex-start;  
 }
+
 main .rightbox{
     width:75%;
+    border-left:2px solid var(--primary-light);
+    padding:10px 20px;
+
 }
 
 #Work a{
@@ -158,7 +177,6 @@ main .rightbox{
     padding:8px 12px;
     margin-bottom:5px;
     border-radius: 0 10px 10px 0;
-
 
     background-image:none;
     background-position: 96% 7px;
@@ -207,7 +225,6 @@ main .rightbox{
 
 
 
-#ContactMe{align-items:center;}
 #ContactMe ul{
     display:flex;
     justify-content: space-around;
@@ -243,20 +260,33 @@ main .rightbox{
         animation:none;
     }
 
-    main {width:90vw;}
+    main {
+        width:100%;
+        padding:30px 20px;
+    }
+
+    /* each main header <h3> goes to the top of contents */
     main section{
         flex-direction: column;
+        align-items: fle;
+        
     }
-    main h3{
+    main h3{  
+        width:auto;
+        border-bottom:none;
+        border-right:var(--dashed_width) dashed var(--primary-light); 
+        border-radius: 20px 20px 0 0;
+        padding-right:30px;
+    }
+
+    main .rightbox{
         width:100%;
-        text-align: left;
-        border-right:none;
-        border-bottom:4px solid #000;
-        padding-left:0px;
-        margin-right:0px;
-        margin-bottom:20px;
+        padding-left:0;
+        padding-right:0;
+        /* border change in between <h3> and .rightbox */
+        border-top:2px solid var(--primary-light);
+        border-left:none;
     }
-    main .rightbox{width:100%;}
 }
   
 /* Small smartphones - image placeholders change color */
