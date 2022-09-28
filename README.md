@@ -2,22 +2,22 @@
 
 ## Description
 
-This webpage is created to refactor the previous code to meet the standard rules for web accessibility. The index code has been changed with semantic HTML elements and alt attributes added to images. CSS is also modified to increase the efficiency.
+This webpage is created to make a portfolio of my work in the future to showcase my skills to employers. This page is developed applying flexbox and media queries for responsive layout, and used CSS variables so that I can easily change the color scheme in the future. Since I don't have enough showcase applicaions yet, I used placehoder images, titles, and temporary links.
 
 ## Usage
 
-Please see the index.html and style.css files for all modification. 
-The modification details are commented and deleted CSS are commented out for reference.
-
 - The URL of the Deployed page:  
-https://morisky78.github.io/Code-refactor-horiseon/
+https://morisky78.github.io/Portfolio/
 
 - The URL of the GitHub repository:  
-https://github.com/morisky78/Code-refactor-horiseon
+https://github.com/morisky78/Portfolio
 
 
-The screenshot of the page is attached below to show the application looks the same as the previous one.  
-<img src="./assets/images/screencapture.png" width="600" alt="Screenshot of my refactoring result">
+The screenshots of the page is attached below to show the layout difference in 3 different screen sizes.
+
+<img src="./assets/images/screencapture-L.png" height="500" alt="Screenshot of my profile page in large screen size">
+<img src="./assets/images/screencapture-M.png" height="500"  alt="Screenshot of my profile page in medium screen size">
+<img src="./assets/images/screencapture-S.png" height="500"  alt="Screenshot of my profile page in small screen size">
 
 
 ## Credits
