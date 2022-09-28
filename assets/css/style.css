@@ -1,16 +1,19 @@
 
 :root{
+    /* colors */
     --primary-light: #a5d0cd;
     --primary-dark: #6ac3bd;
     --background: #eaf3f2;
     --fontcolor: #2d6c68;
-    --WorkDefaultHeight : 120px;
+    /* height for small Work img */
+    --work-height : 140px;
     /* values for main structure  :for <header> & <main>  */
     --main-structure-w : 80wh;
     --max-width : 992px;
 
     --dashed_width: 2px;
 }
+
 body{background-color: var(--background);}
 header{
     width:100%;
@@ -43,7 +46,7 @@ header nav a{
 h1{
     position:relative;
     font-size:2.7em;
-    color:rgb(39, 37, 35);
+    color:var(--fontcolor);
     background-color:#fff;
     border:var(--dashed_width) dashed var(--primary-light);
     border-radius: 10px;
@@ -128,7 +131,7 @@ main section{
     justify-content: center;
 }
 
-/* Headers in main */
+/* Headers in ain */
 main h3{
     width:20%;
     text-align:right;
@@ -152,26 +155,26 @@ main .rightbox{
 
 }
 
-#Work a{
-    display:block;
-    position:relative;
-    border:4px solid var(--primary-dark);
-}
+#AboutMe p{line-height: 160%;}
+
 #Work ul{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 #Work li {
-    width:49.2%;
-    margin-bottom:8px;
+    width:49%;
+    margin-bottom:12px;
+    position:relative;
+    border:2px solid var(--primary-dark);
+    border-radius: 10px;
 }
 
 #Work h5{
     position:absolute;
     bottom:10px;
     left:-6px;
-    
+    color:var(--fontcolor);
     padding:8px 12px;
     margin-bottom:5px;
     border-radius: 0 10px 10px 0;
@@ -180,21 +183,25 @@ main .rightbox{
     background-position: 96% 7px;
     background-repeat: no-repeat;
     background-size: 32px;
-    background-color:var(--primary-dark);
+    background-color:var(--primary-light);
 
     /* noticed absolute positioned header disapear(goes behind the image) when the filter property applied to image */
     z-index: 2;
 }
-#Work small{display:block;font-size:0.93m;font-weight:normal;}
+#Work small{display:block;margin-top:4px;font-size:0.93m;font-weight:normal;}
+
 #Work li img{
     width:100%;
-    height:var(--WorkDefaultHeight);
+    height:var(--work-height);
     object-fit: cover;
     display:block;
-    filter: grayscale(0.1) brightness(0.8) contrast(0.7); 
+    filter: brightness(0.8) contrast(0.7); 
+    border-radius: 8px;
 }
 #Work li:hover{
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+    transition: transform 0.5s;
 }
 #Work li:hover img{
     filter:none;
@@ -203,13 +210,13 @@ main .rightbox{
 #Work li:hover h5{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     padding-right:50px;
-    color:white;
+    color:black;
     background-image: url(../images/white-arrow.png);
     transition: padding-right 0.5s, background-image 1s;
     
 }
 
-
+/* first Work image larger for L/M screen */
 #Work li.first{
     width:100%;
 }
@@ -236,14 +243,14 @@ main .rightbox{
 footer{
     background-color: var(--primary-light);
     text-align: center;
-    padding:20px 0;
+    padding:15px 0;
     color:var(--fontcolor);
     font-size:0.8em;
 }
 
 /* Tablets - header changes color */
 @media screen and (max-width: 992px) {
-    
+    /* uses default style */
 }
   
 /* Large smartphones - navbar changes color */
@@ -310,10 +317,11 @@ footer{
     }
     #Work li {
         width:100%;
-        margin-bottom:8px;
+        /* margin-bottom:8px; */
     }
+    /* the first work image size become same as the rest */
     #Work li.first img{
-        height:var(--WorkDefaultHeight);
+        height:var(--work-height);
     }
     #ContactMe ul{
         flex-direction:column;
